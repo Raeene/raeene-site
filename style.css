@@ -1,0 +1,30 @@
+:root{--bg:#050b3a;--win:#0b1a9e;--bar:#c0c0d8;--barink:#0b1a9e;--text:#e4e4f2;--dim:#9aa6ec;--y:#ffd84a;--c:#5ff0ff;--line:#6a78e8}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;color:var(--text);font:22px/1.35 "VT323","Courier New",monospace;padding:28px 16px 70px;
+background:var(--bg) radial-gradient(circle at 50% 0,#10216e,var(--bg) 70%)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 1px,transparent 1px 3px)}
+.win{max-width:820px;margin:0 auto;background:var(--win);border:3px solid var(--bar);box-shadow:8px 8px 0 #000a}
+.title{display:flex;justify-content:space-between;background:var(--bar);color:var(--barink);padding:2px 12px}
+.menu{display:flex;flex-wrap:wrap;gap:0 4px;border-bottom:2px solid var(--line);padding:4px 8px}
+.menu a{color:var(--text);text-decoration:none;padding:0 10px}
+.menu a:hover,.menu a:focus-visible,.menu a[aria-current]{background:var(--y);color:var(--barink);outline:0}
+main{padding:22px 26px 30px}
+h1{margin:0 0 4px;font-size:52px;line-height:1;font-weight:400;color:var(--y)}
+h2{margin:26px 0 8px;font-size:28px;font-weight:400;color:var(--c)}
+h3{margin:0;font-size:24px;font-weight:400}
+p{margin:0 0 10px;max-width:62ch}
+a{color:var(--c)}a:hover{color:var(--y)}
+:focus-visible{outline:2px solid var(--y);outline-offset:2px}
+.y{color:var(--y)}.d{color:var(--dim)}
+.cur{display:inline-block;width:.5em;height:.8em;background:var(--y);margin-left:6px;animation:b 1s steps(1) infinite}
+@keyframes b{50%{opacity:0}}
+.row{display:grid;grid-template-columns:130px 1fr;gap:0 18px;margin-bottom:14px}
+.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px 10px}
+.tags li{border:1px solid var(--line);padding:0 10px}
+.dir{list-style:none;padding:0;margin:0}
+.dir li{padding:2px 0}.dir a{text-decoration:none}
+.keys{position:fixed;left:0;right:0;bottom:0;background:var(--bar);color:var(--barink);display:flex;flex-wrap:wrap;justify-content:center;gap:0 22px;padding:2px 10px;z-index:2}
+.keys a{color:var(--barink);text-decoration:none}.keys a:hover{background:var(--barink);color:var(--bar)}
+@media(max-width:640px){body{font-size:20px}h1{font-size:38px}.row{grid-template-columns:1fr}main{padding:18px}}
+@media(prefers-reduced-motion:reduce){.cur{animation:none}}
