@@ -44,3 +44,10 @@ a{color:var(--c)}a:hover{color:var(--a)}
 .keys a{color:var(--dim);text-decoration:none}.keys a:hover{color:var(--a)}
 @media(max-width:820px){.hero{grid-template-columns:1fr}.radar{margin:0 auto}nav a{margin:0 12px 0 0}body{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.cur{animation:none}.menu a{transition:none}}
+.job{max-width:780px;margin-bottom:22px}
+.job .hd{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.job .pc{color:var(--a);font-size:30px}
+.bar{height:22px;border:1px solid var(--line);background:rgba(13,26,107,.45);padding:2px;margin:4px 0 6px}
+.bar i{display:block;height:100%;width:var(--p);background:repeating-linear-gradient(90deg,var(--c) 0 12px,transparent 12px 15px);box-shadow:0 0 14px rgba(77,243,255,.6);animation:fill 1.3s steps(24) both}
+@keyframes fill{from{width:0}}
+@media(prefers-reduced-motion:reduce){.bar i{animation:none}}
