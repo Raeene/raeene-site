@@ -1,7 +1,7 @@
 (function(){
 var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-var map={'1':'/','2':'/about/','3':'/resume/','4':'/projects/','5':'/now/'};
-addEventListener('keydown',function(e){if(e.ctrlKey||e.metaKey||e.altKey)return;var t=e.target.tagName;if(t==='INPUT'||t==='TEXTAREA')return;if(map[e.key])location.href=map[e.key]});
+var links=document.querySelectorAll('nav a');
+addEventListener('keydown',function(e){if(e.ctrlKey||e.metaKey||e.altKey)return;var t=e.target.tagName;if(t==='INPUT'||t==='TEXTAREA')return;var link=links[Number(e.key)-1];if(link)location.href=link.href});
 var lines=document.querySelectorAll('[data-type]');
 lines.forEach(function(el){el.dataset.full=el.textContent;if(!reduce)el.textContent=''});
 if(!reduce){var i=0;(function next(){if(i>=lines.length)return;var el=lines[i++],s=el.dataset.full,n=0;
