@@ -51,3 +51,9 @@ a{color:var(--c)}a:hover{color:var(--a)}
 .bar i{display:block;height:100%;width:var(--p);background:repeating-linear-gradient(90deg,var(--c) 0 12px,transparent 12px 15px);box-shadow:0 0 14px rgba(77,243,255,.6);animation:fill 1.3s steps(24) both}
 @keyframes fill{from{width:0}}
 @media(prefers-reduced-motion:reduce){.bar i{animation:none}}
+
+.skip{position:absolute;left:-999px;top:0;background:var(--a);color:#1a0f00;padding:4px 10px;z-index:20;text-shadow:none}.skip:focus{left:8px;top:8px}
+.ps1 a{color:var(--a);text-decoration:none}.ps1 a:hover{text-decoration:underline}
+html{-webkit-text-size-adjust:100%}
+@media (hover:none),(pointer:coarse){.keys{display:none}nav a span,.menu a span{display:none}main{padding-bottom:6vh}}
+@media print{body::before,.keys,nav,.radar,.cap,.skip{display:none!important}html,body{background:#fff!important;color:#000!important}*{text-shadow:none!important;box-shadow:none!important}h1,h2,h3,.a,.d,.pc,a{color:#000!important}.tl,.tl .it{border-color:#000}.tl .it::before{background:#000}body{font-size:13pt}}
