@@ -1,11 +1,52 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects | Raeene</title><meta name="description" content="Projects by Raeene: PacketStory, a browser-based packet analyzer, and 0vuln Range, a simulated hacking lab.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"><link rel="stylesheet" href="../style.css"><meta name="theme-color" content="#04061a"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E👾%3C/text%3E%3C/svg%3E"></head><body><a class="skip" href="#main">skip to content</a>
-<header class="top"><div class="ps1"><b>raeene</b>@<i><a href="https://0vuln.com" title="0vuln.com hub">0vuln</a></i>:~/projects$</div><nav aria-label="Pages"><a href="../"><span>[1]</span> home</a><a href="../about/"><span>[2]</span> about</a><a href="../resume/"><span>[3]</span> resume</a><a href="./" aria-current="page"><span>[4]</span> projects</a><a href="../now/"><span>[5]</span> now</a></nav></header>
-<main id="main"><h1 style="font-size:clamp(54px,9vw,100px)">PROJECTS</h1>
-<div class="proj"><span class="st">[2026]</span><h3>PacketStory</h3><p>Drop a .pcap capture and get the story of what happened in plain language. Detects port scans, brute force, cleartext logins, DNS tunneling, ARP spoofing and beaconing, with MITRE ATT&amp;CK tags. Runs entirely in your browser; nothing is uploaded.</p><p class="d">JavaScript, Web Workers, packet parsing</p><a href="https://pcap.0vuln.com">open pcap.0vuln.com</a></div>
-<div class="proj"><span class="st">[2026]</span><h3>0vuln Range</h3><p>A simulated hacking lab in the browser: 10 services (FTP, SMB, NFS, DNS, SMTP, SNMP, MySQL, IMAP, SSH, HTTP), 10 flags and progressive hints. Export your session as a real .pcap and analyze it in PacketStory.</p><p class="d">JavaScript, simulated network stack, pcap generation</p><a href="https://range.0vuln.com">open range.0vuln.com</a></div></main>
-<div class="keys" aria-hidden="true"><span>press a number key:</span><a href="../">1:home</a><a href="../about/">2:about</a><a href="../resume/">3:resume</a><a href="./">4:projects</a><a href="../now/">5:now</a></div>
-<script src="../fx.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects | Raeene</title>
+<meta name="description" content="Projects by Raeene: PacketStory, a browser-based packet analyzer, and 0vuln Range, a simulated hacking lab.">
+<link rel="canonical" href="https://raeene.0vuln.com/projects/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raeene.0vuln.com/projects/">
+<meta property="og:title" content="Projects | Raeene">
+<meta property="og:description" content="Projects by Raeene: PacketStory, a browser-based packet analyzer, and 0vuln Range, a simulated hacking lab.">
+<meta property="og:image" content="https://raeene.0vuln.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#05061a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/vt323.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script src="/fx.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">skip to content</a>
+<header class="ov">
+  <a class="ov-logo" href="https://0vuln.com" aria-label="0vuln.com hub"><img src="/favicon.svg" alt="">0vuln</a><span class="ov-crumb">/ <a class="ov-home" href="/">raeene</a> <b>~/projects</b></span>
+  <nav aria-label="Pages"><a href="/"><span>[1]</span> home</a><a href="/about/"><span>[2]</span> about</a><a href="/resume/"><span>[3]</span> resume</a><a href="/projects/" aria-current="page"><span>[4]</span> projects</a><a href="/now/"><span>[5]</span> now</a></nav>
+</header>
+<main id="main">
+<h1 class="glitch page-h">PROJECTS</h1>
+<p class="lead">Things I've built. All of them run in the browser and all of them are open source.</p>
+<div class="cards two mt">
+  <article class="card big k-cy"><div class="meta"><span>2026 / blue team tool</span><span class="live">&#9679; live at pcap.0vuln.com</span></div><h3>PacketStory</h3>
+    <div class="body"><div><p>Drop a .pcap or .pcapng capture and get the story of what happened in plain language, with each finding tagged with a MITRE ATT&amp;CK technique. Parsing runs locally in a Web Worker, and the page's CSP blocks every network request, so captures never leave your machine.</p></div>
+    <ul class="feat"><li>port scans, host sweeps, brute force</li><li>cleartext FTP/HTTP/Telnet credentials</li><li>DNS tunneling, ARP spoofing, beaconing</li><li>filterable packet table, exportable report</li></ul></div>
+    <ul class="chips"><li>JavaScript</li><li>Web Workers</li><li>binary parsing</li><li>pcapng</li></ul>
+    <div class="links"><a href="https://pcap.0vuln.com">open pcap.0vuln.com &rarr;</a><a href="https://github.com/Raeene/pcap-site">source on github</a></div></article>
+  <article class="card big k-mg"><div class="meta"><span>2026 / red team lab</span><span class="live">&#9679; live at range.0vuln.com</span></div><h3>0vuln Range</h3>
+    <div class="body"><div><p>A simulated hacking lab in a browser terminal. One target, 10 services (FTP, SMB, NFS, DNS, SMTP, SNMP, MySQL, IMAP, SSH, HTTP), 10 flags and progressive hints. Every command generates real packets, and one command sends your whole session to PacketStory so you can investigate your own attack.</p></div>
+    <ul class="feat"><li>simulated network stack</li><li>real .pcap generation</li><li>tab completion, hints, saved progress</li><li>one-click hand-off to PacketStory</li></ul></div>
+    <ul class="chips"><li>JavaScript</li><li>network protocols</li><li>pcap writer</li></ul>
+    <div class="links"><a href="https://range.0vuln.com">open range.0vuln.com &rarr;</a><a href="https://github.com/Raeene/range-site">source on github</a></div></article>
+  <article class="card"><div class="meta"><span>2026 / site</span><span class="live">&#9679; live</span></div><h3>0vuln.com</h3><p>The hub that ties it together, with a small in-browser shell. Static, served from Cloudflare's edge, strict CSP with no inline scripts.</p><div class="links"><a href="https://0vuln.com">visit &rarr;</a><a href="https://github.com/Raeene/0vuln-site">source</a></div></article>
+  <article class="card k-ok"><div class="meta"><span>2026 / event</span><span>ENSAK club</span></div><h3>Find the Flag CTF</h3><p>Organized a CTF for the ENSAK cybersecurity club: recon, FTP and Metasploit challenges, with a teaching session first so beginners could follow.</p></article>
+</div>
+
+</main>
+<footer class="foot">
+  <span>&copy; 2026 Mohamed-Rayane (Raeene). Part of <a href="https://0vuln.com">0vuln.com</a>.</span>
+  <nav aria-label="Elsewhere"><a href="https://github.com/Raeene">github</a><a href="https://www.linkedin.com/in/ray-safi-938491195/">linkedin</a><a href="mailto:raaene@protonmail.com">email</a><a href="https://range.0vuln.com">range</a><a href="https://pcap.0vuln.com">pcap</a></nav>
+</footer>
+<div class="keys" aria-hidden="true"><span>press a key:</span><a href="/"><b>1</b> home</a><a href="/about/"><b>2</b> about</a><a href="/resume/"><b>3</b> resume</a><a href="/projects/"><b>4</b> projects</a><a href="/now/"><b>5</b> now</a></div>
+</body>
+</html>
