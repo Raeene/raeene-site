@@ -143,3 +143,16 @@
 .nf .lead { margin: 0 auto 36px; }
 .nf .row { justify-content: center; }
 @media (max-width: 520px) { .id-term { font-size: 12px; } .id-in { padding: 20px; } .me-hero .row .btn { flex: 1; } }
+
+/* v2.1 */
+.idcard { animation: none; background: var(--line-2); box-shadow: none; }
+.avatar { box-shadow: none; }
+.me-hero h1 .grad-acc { color: var(--green); }
+.contact { text-align: left; padding: 72px 0 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: none; }
+.contact .lead { margin-left: 0; }
+.contact .row { justify-content: flex-start; }
+.mail-big { align-items: flex-start; }
+.bar i { box-shadow: none; background: var(--green); }
+.proj-vis { background: rgba(0, 0, 0, .25); }
+.timeline li::before { box-shadow: none; }
+.now-split { border-top: 1px solid var(--line); padding-top: 28px; }
